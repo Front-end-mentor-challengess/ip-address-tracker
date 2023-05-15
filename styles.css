@@ -19,7 +19,7 @@ body{
     padding-top: 2rem;
     gap: 2rem;
     min-height: 30vh;
-    background-image: url('/images/pattern-bg-desktop.png');
+    background-image: url('images/pattern-bg-desktop.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -47,7 +47,7 @@ input[type=text]:focus{
 button{
     border: none;
     width: 15%;
-    background-image: url('/images/icon-arrow.svg');
+    background-image: url('images/icon-arrow.svg');
     background-color: black;
     background-repeat: no-repeat;
     background-position-x: 50%;
@@ -126,6 +126,6 @@ label{
         flex-direction: column;
     }
     .container{
-        background-image: url('/images/pattern-bg-mobile.png');
+        background-image: url('images/pattern-bg-mobile.png');
     }
 }
