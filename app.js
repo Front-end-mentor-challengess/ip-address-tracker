@@ -30,6 +30,12 @@ const fetchAndUpdate = ()=>{
     .catch(error => alert('Please enter a valid IP adress'));
 };
 btn.addEventListener('click', fetchAndUpdate);
+input.addEventListener("keyup", (event)=> {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        btn.click();
+    }
+});
 const setMapViewByLocationName= (locationName) =>{
     // Make a request to the Mapbox Geocoding API
     fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(locationName) + '.json?access_token=pk.eyJ1Ijoic2hlZmExIiwiYSI6ImNsaHAxa29ocjFtczQzcm9kN2J5NXFyY2kifQ.rIHHwZj6gjA3IFFPuWUqzw')
