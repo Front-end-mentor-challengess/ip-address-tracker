@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | IP Address Tracker</title>
@@ -11,38 +16,46 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: white; background-color: black; text-decoration: none;}
   </style>
 </head>
 <body>
   <main>
-    <h1>IP Address Tracker</h1>
-    <form action="">
+    <div class="container">
+      <h1>IP Address Tracker</h1>
+    <form action="" >
       <input type="text" placeholder="Search for any IP address or domain">
       <button type="button"></button>
     </form>
     <div class="info">
       <section>
         <label>IP Address</label>
-        <p class="output"></p>
+        <p class="output" id="ip-out">--</p>
       </section>
+      <div class="splitter"></div>
       <section>
         <label>Location</label>
-        <p class="output"></p>
+        <p class="output" id="loc-out">--</p>
       </section>
+      <div class="splitter"></div>
       <section>
         <label>Timezone</label>
-        <p>UTC <span class="output"></span></p>
+        <p class="output">UTC <span id="zone-out">--</span></p>
       </section>
+      <div class="splitter"></div>
       <section>
         <label>ISP</label>
-        <p class="output"></p>
+        <p class="output" id="isp-out">--</p>
       </section>
     </div>
+    </div>
+    <div id="map"></div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/khalidsherif1/">Khalid Sherif</a>.
+    </div>
   </main>
-  <!--<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>-->
+  
+  <script src="app.js"></script>
 </body>
 </html>

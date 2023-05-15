@@ -8,51 +8,124 @@
     margin: 0;
     box-sizing: border-box;
 }
+main{
+    height: 100vh;
+}
 body{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    padding-top: 2rem;
+    gap: 2rem;
+    min-height: 30vh;
     background-image: url('/images/pattern-bg-desktop.png');
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Rubik', sans-serif;
-}
-main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
 }
 h1{
     color: white;
+    font-weight: 500;
 }
 form{
-    width: 30%;
+    min-width: 40%;
     display: flex;
 }
 input[type=text]{
     padding: 1rem;
-    width: 80%;
+    width: 85%;
     border-radius: 15px 0 0 15px;
     border: 0;
+    font-size: 1.125rem;
+}
+input[type=text]:focus{
+    outline: none;
 }
 button{
-    width: 19%;
-    height: 50px;
+    border: none;
+    width: 15%;
     background-image: url('/images/icon-arrow.svg');
     background-color: black;
     background-repeat: no-repeat;
-    background-position-x: 2.5rem;
-    background-position-y: 1rem;
+    background-position-x: 50%;
+    background-position-y: 50%;
     border-radius: 0 15px 15px 0;
 }
+button:hover{
+    cursor: pointer;
+    background-color: var(--Very-Dark-Gray);
+}
+::placeholder{
+    font-size: 1.125rem;
+}
 .info{
-    position: relative;
-    top: 100px;
+    position: absolute;
+    z-index: 1000;
+    top: 22vh;
+    gap: 1rem;
     display: flex;
     border-radius: 15px;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: white;
     margin: 0 auto;
-    width: 70%;
+    width: 75%;
     min-height: 150px;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+.info > section {
+    flex: 1;
+}
+label{
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--Dark-Gray);
+    font-weight: 500;
+    
+}
+.splitter{
+    border-right: 1px solid var(--Dark-Gray);
+    height: 4rem;
+    align-self: center;
+}
+#map {
+    min-height: 68vh; 
+}
+.output{
+    margin: 2rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+    .info{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.5rem 0;
+    }
+    .splitter{
+        display: none;
+    }
+    label{
+        font-size: 0.625rem;
+        text-align: center;
+    }
+    .output{
+        font-size: 1.125rem;
+        margin: 0;
+    }
+    form{
+        min-width: 70%;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        background-image: url('/images/pattern-bg-mobile.png');
+    }
 }
