@@ -18,7 +18,7 @@ let marker = L.marker([51.5, -0.09]);
 const fetchAndUpdate = ()=>{
     map.removeLayer(marker);
     // Make a request to the IP Geolocation API
-    ipAddress = input.value;
+    let ipAddress = input.value;
     const apiEndpoint = `https://geo.ipify.org/api/v2/country?apiKey=${apiKey}&ipAddress=${ipAddress}`;
     fetch(apiEndpoint)
     .then(response => response.json())
